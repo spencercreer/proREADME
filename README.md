@@ -1,8 +1,8 @@
-# spencer
+# Better Readme
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Description
-  spencer
+  generate readme
 
   ## Table of Contents
   * [Links](#links)
@@ -12,20 +12,21 @@
   * [Contact](#contact)
 
   ## Links
-  URL: [https://yahoo.com](https://yahoo.com)
+  URL: [https://www.yahoo.com](https://www.yahoo.com)
 
-  Repository: [https://www.yahoo.com](https://www.yahoo.com)
+  Repository: [www.google.com](www.google.com)
 
 
   ## Animation
   The following animation demonstrates the application functionality:
+  ![Better Readme animation](./assets/day_planner.gif)
 
   ## Technologies
  * JavaScript
+ * CSS
  * Bootstrap
  * jQuery
- * MongoDB
- * Heroku
+ * npm
 
 
   ## APIs

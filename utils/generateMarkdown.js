@@ -47,6 +47,7 @@ ${techTC}
 
   ## Animation
   The following animation demonstrates the application functionality:
+  ![${data.title} animation](${data.imagePath})
 
   ${techHeading}
 ${techList}

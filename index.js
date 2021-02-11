@@ -51,6 +51,11 @@ const questions = [
         name: 'technologies',
       },
       {
+        type: 'input',
+        message: 'What is the animation relative path?',
+        name: 'imagePath',
+      },   
+      {
         type: 'list',
         choices: ['Yes','No'],
         message: 'Does your project utilize APIs?',
