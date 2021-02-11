@@ -29,6 +29,16 @@ const questions = [
         name: 'description',
       },   
       {
+        type: 'input',
+        message: 'What is the application URL?',
+        name: 'url',
+      },   
+      {
+        type: 'input',
+        message: 'What is the repository URL?',
+        name: 'repoURL',
+      },   
+      {
         type: 'list',
         choices: ['MIT','APACHE 2.0','GPL 3.0','BSD 3','None'],
         message: 'What license should your project have?',

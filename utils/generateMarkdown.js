@@ -6,8 +6,9 @@
 function generateMarkdown(data) {
   let badge;
   let tech = data.technologies;
-  let techList = '';
+  let techTC
   let techHeading= '';
+  let techList = '';
 
   if (data.license !== 'None') {
     badge = `![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)`;
@@ -17,9 +18,11 @@ function generateMarkdown(data) {
 
   if (tech == undefined || tech.length == 0){
     // empty technologies array
+    techTC = '';
     techHeading = '';
     techList = '';
   } else{
+    techTC = ` * [Technologies](#technologies)`
     techHeading = `## Technologies`
     for(i=0; i<tech.length; i++){
     techList += ` * ${tech[i]}\n`
@@ -34,13 +37,13 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Links](#links)
   * [Animation](#animation)
-  * [Technologies](#technologies)
+${techTC}
   * [APIs](#apis)
   * [Contact](#contact)
 
   ## Links
-  URL:<br/>
-  Repository:<br/>
+  URL: [${data.url}](${data.url})\n
+  Repository: [${data.repoURL}](${data.repoURL})\n
 
   ## Animation
   The following animation demonstrates the application functionality:
@@ -59,8 +62,8 @@ ${techList}
   ## Contribute
   ${data.contribute}
   ## Contact
-  For questions or comments, please contact me.<br/>
-  Email: ${data.email}<br/>
+  For questions or comments, please contact me.\n
+  Email: [${data.email}](${data.email})\n
   GitHub: [${data.username}](https://github.com/${data.username}/)
 `;
   return markdown
