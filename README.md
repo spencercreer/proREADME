@@ -1,46 +1,55 @@
-# s
-  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# proREADME
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-  ## Description
-  s
+## Description
+An application to generate professional README markdown files.
 
-  ## Table of Contents
-  * [Links](#links)
-  * [Animation](#animation) 
- * [Technologies](#technologies) 
- * [APIs](#apis)  
-  * [Dependencies](#dependencies)
-  * [Tests](#tests)
-  * [Instructions](#instructions)
-  * [Contact](#contact)
+## Table of Contents
+* [Links](#links)
+* [Animation](#animation) 
+* [Instructions](#instructions) 
+ * [Installation](#installations) 
+ * [Tests](#tests) 
+ * [Technologies](#technologies)  
+ * [License](#license)
+* [Contact](#contact)
 
-  ## Links
-  URL: []()
+## Links
 
-  Repository: [s](s)
+Repository: [https://github.com/spencercreer/proREADME](https://github.com/spencercreer/proREADME)
 
 
-  ## Animation
-  The following animation demonstrates the application functionality:
-  ![s animation](s)
+## Animation
+The following animation demonstrates the application functionality:
+![proREADME animation](./assets/proREADME.gif)
+## Instructions
+Must have node.js installed.
+## Installation
+To install necessary dependencies, run the following command:
 
-  ## Technologies
+  ```
+  npm i
+  ```
+## Tests
+To run tests, run the following command:
+
+  ```
+  npm test
+  ```
+    
+## Contribute
+Please submit a PR if you would like to contribute.
+## Technologies
  * JavaScript
+ * Node.js
+ * npm
 
 
-  ## APIs
+## License
+This project is licensed under the MIT license.
+## Contact
+For questions or comments, please contact me.
 
-  ## Dependencies
-  s
-  ## Tests
-  s
-  ## Instructions
-  s
-  ## Contribute
-  s
-  ## Contact
-  For questions or comments, please contact me.
+  Email: [spencercreer@gmail.com](spencercreer@gmail.com)
 
-  Email: [s](s)
-
-  GitHub: [s](https://github.com/s/)
+  GitHub: [spencercreer](https://github.com/spencercreer/)

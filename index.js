@@ -56,6 +56,12 @@ const questions = [
         name: 'technologies',
       },
       {
+        type: 'list',
+        choices: ['Yes','No'],
+        message: 'Does the application utilize APIs?',
+        name: 'apis',
+      },
+      {
         type: 'input',
         message: 'What does the user need to know about using the repo?',
         name: 'repoInfo',
