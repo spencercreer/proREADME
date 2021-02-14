@@ -1,47 +1,46 @@
-# Better Readme
+# s
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Description
-  generate readme
+  s
 
   ## Table of Contents
   * [Links](#links)
-  * [Animation](#animation)
- * [Technologies](#technologies)
-  * [APIs](#apis)
+  * [Animation](#animation) 
+ * [Technologies](#technologies) 
+ * [APIs](#apis)  
+  * [Dependencies](#dependencies)
+  * [Tests](#tests)
+  * [Instructions](#instructions)
   * [Contact](#contact)
 
   ## Links
-  URL: [https://www.yahoo.com](https://www.yahoo.com)
+  URL: []()
 
-  Repository: [www.google.com](www.google.com)
+  Repository: [s](s)
 
 
   ## Animation
   The following animation demonstrates the application functionality:
-  ![Better Readme animation](./assets/day_planner.gif)
+  ![s animation](s)
 
   ## Technologies
  * JavaScript
- * CSS
- * Bootstrap
- * jQuery
- * npm
 
 
   ## APIs
 
   ## Dependencies
-  none
+  s
   ## Tests
-  none
+  s
   ## Instructions
-  none
+  s
   ## Contribute
-  none
+  s
   ## Contact
   For questions or comments, please contact me.
 
-  Email: [spencercreer@gmail.com](spencercreer@gmail.com)
+  Email: [s](s)
 
-  GitHub: [spencercreer](https://github.com/spencercreer/)
+  GitHub: [s](https://github.com/s/)
