@@ -11,7 +11,7 @@ function generateMarkdown(data) {
   let techHeading = '';
   let techList = '';
   let apiTC = '';
-  let apiHeading = '';
+  let apiText = '';
   let licenseTC = '';
   let licenseText = '';
 
@@ -71,10 +71,10 @@ function generateMarkdown(data) {
   // generate APIs table of contents, and heading
   if (data.apis == 'No'){
     apiTC = '';
-    apiHeading = '';
+    apiText = '';
   } else {
     apiTC = `\n * [APIs](#apis)`
-    apiHeading = `## APIs`
+    apiText = `## APIs \nThe application utilizes the following APIs:`
   }
 
   let markdown = `# ${data.title}
@@ -104,7 +104,7 @@ ${testsText}
 ${data.contribute}
 ${techHeading}
 ${techList}
-${apiHeading}
+${apiText}
 ${licenseText}
 ## Contact
 For questions or comments, please contact me.\n
