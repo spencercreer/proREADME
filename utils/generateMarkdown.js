@@ -108,8 +108,8 @@ ${apiHeading}
 ${licenseText}
 ## Contact
 For questions or comments, please contact me.\n
-  Email: [${data.email}](${data.email})\n
-  GitHub: [${data.username}](https://github.com/${data.username}/)
+Email: <a href="mailto: ${data.email}" target="_blank">${data.email}</a>\n
+GitHub: [${data.username}](https://github.com/${data.username}/)
 `;
   return markdown
 }

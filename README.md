@@ -50,6 +50,6 @@ This project is licensed under the MIT license.
 ## Contact
 For questions or comments, please contact me.
 
-  Email: [spencercreer@gmail.com](spencercreer@gmail.com)
+  Email: <a href="mailto: spencercreer@gmail.com" target="_blank">spencercreer@gmail.com</a>
 
   GitHub: [spencercreer](https://github.com/spencercreer/)
