@@ -51,7 +51,7 @@ const questions = [
       },   
       {
         type: 'checkbox',
-        choices: ['JavaScript','HTML','CSS','Bootstrap','jQuery','Node.js','npm','MongoDB','Mongoose','Heroku','Express'],
+        choices: ['JavaScript','HTML','CSS','Bootstrap','jQuery','Node.js','npm', 'MySQL', 'MongoDB','Mongoose','Heroku','Express'],
         message: 'What technologies does your project utilize?',
         name: 'technologies',
       },

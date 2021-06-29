@@ -86,7 +86,8 @@ ${data.description}
 ## Table of Contents
 * [Links](#links)
 * [Animation](#animation) 
-* [Instructions](#instructions) ${installationTC} ${testsTC} ${techTC} ${apiTC} ${licenseTC}
+* [Instructions](#instructions) ${installationTC} ${testsTC}
+* [Contribute](#contribute) ${techTC} ${apiTC} ${licenseTC}
 * [Contact](#contact)
 
 ## Links
@@ -95,6 +96,7 @@ Repository: [${data.repoURL}](${data.repoURL})\n
 
 ## Animation
 The following animation demonstrates the application functionality:
+<br>
 ![${data.title} animation](${data.imagePath})
 ## Instructions
 ${data.repoInfo}
@@ -102,10 +104,14 @@ ${installationText}
 ${testsText}
 ## Contribute
 ${data.contribute}
+
 ${techHeading}
 ${techList}
+
 ${apiText}
+
 ${licenseText}
+
 ## Contact
 For questions or comments, please contact me.\n
 Email: <a href="mailto: ${data.email}" target="_blank">${data.email}</a>\n
