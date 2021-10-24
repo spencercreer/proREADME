@@ -1,9 +1,13 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
+const fs = require('fs'); // fs - file system https://nodejs.org/api/fs.html
 
-// function to initialize program
-function init() {
-    writeToFile('proREADME.md', questions)
+// function to write README file
+function writeToFile(fileName, data) {
+  var gMd = require("./utils/generateMarkdown");
+  inquirer.prompt(data).then((response) =>
+  fs.writeFile(fileName, gMd(response), (err) =>
+  err ? console.error(err) : console.log(`--------------\nproREADME generated\n--------------`))
+);
 }
 
 // array of questions for user
@@ -40,7 +44,7 @@ const questions = [
       },   
       {
         type: 'list',
-        choices: ['MIT','APACHE 2.0','GPL 3.0','BSD 3','None'],
+        choices: ['MIT','APACHE2.0','GPL3.0','BSD3','None'],
         message: 'What license should your project have?',
         name: 'license',
       },
@@ -51,7 +55,7 @@ const questions = [
       },   
       {
         type: 'checkbox',
-        choices: ['JavaScript','HTML','CSS','Bootstrap','jQuery','Node.js','npm', 'MySQL', 'MongoDB','Mongoose','Heroku','Express'],
+        choices: ['JavaScript','HTML','CSS','Bootstrap','jQuery','Node.js','npm', 'MySQL','Sequelize', 'MongoDB','Mongoose','Heroku','Express','React'],
         message: 'What technologies does your project utilize?',
         name: 'technologies',
       },
@@ -67,9 +71,15 @@ const questions = [
         name: 'repoInfo',
       },
       {
+        type: 'checkbox',
+        choices: ['inquirer','express','dotenv','express-handlebars','handlebars','mysql2','sequelize', 'body-parser'],
+        message: 'What dependencies does your project utilize?',
+        name: 'dependencies',
+      },
+      {
         type: 'input',
         message: "What command should be run to install dependencies? (Type 'None' if not applicable):",
-        name: 'dependencies',
+        name: 'install',
       },
       {
         type: 'input',
@@ -83,14 +93,5 @@ const questions = [
       },
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-    var gMd = require("./utils/generateMarkdown");
-    inquirer.prompt(data).then((response) =>
-    fs.writeFile(fileName, gMd(response), (err) =>
-    err ? console.error(err) : console.log(`--------------\nproREADME generated\n--------------`))
-  );
-}
-
 // function call to initialize program
-init();
+writeToFile();

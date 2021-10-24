@@ -3,7 +3,9 @@ function generateMarkdown(data) {
   let badge = '';
   let urlText = '';
   let installationTC = '';
+  let installationHeading = '';
   let installationText = '';
+  let dependenciesList = '';
   let testsTC = '';
   let testsText = '';
   let tech = data.technologies;
@@ -22,28 +24,34 @@ function generateMarkdown(data) {
     licenseText = `## License\nThis project is licensed under the ${data.license} license.`;
   } else {
     badge = '';
-  } 
+  }
 
   // generate published url text
   if (data.url !== 'None') {
     urlText = `Published URL: [${data.url}](${data.url})\n`;
   } else {
     urlText = '';
-  } 
+  }
 
   // generate installation table of contents, heading, and text
-  if (data.dependencies !== 'None') {
-    installationTC = `\n * [Installation](#installations)`
-    installationText = `## Installation\nTo install necessary dependencies, run the following command:\n
-  \`\`\`
-  ${data.dependencies}
-  \`\`\``;
-  } else {
+  if (data.dependencies == undefined || data.dependencies.length == 0) {
+    installationTC = '';
+    installationHeading = '';
     installationText = '';
-  } 
+  } else {
+    installationTC = `\n * [Installation](#installation)`
+    installationHeading = `## Installation\nThis application utilizes the following dependencies:\n`
+    for (i = 0; i < data.dependencies.length; i++) {
+      dependenciesList += ` * ${data.dependencies[i]}\n`
+    };
+    installationText = `To install necessary dependencies, run the following command:\n
+  \`\`\`
+  ${data.install}
+  \`\`\``;
+  }
 
   // generate tests table of contents, heading, and text
-  if (data.dependencies !== 'None') {
+  if (data.tests !== 'None') {
     testsTC = `\n * [Tests](#tests)`
     testsText = `## Tests\nTo run tests, run the following command:\n
   \`\`\`
@@ -55,7 +63,7 @@ function generateMarkdown(data) {
   }
 
   // generate technologies table of contents, heading, and list
-  if (tech == undefined || tech.length == 0){
+  if (tech == undefined || tech.length == 0) {
     // empty technologies array
     techTC = '';
     techHeading = '';
@@ -63,13 +71,13 @@ function generateMarkdown(data) {
   } else {
     techTC = `\n * [Technologies](#technologies)`
     techHeading = `## Technologies`
-    for(i = 0; i < tech.length; i++){
-    techList += ` * ${tech[i]}\n`
+    for (i = 0; i < tech.length; i++) {
+      techList += ` * ${tech[i]}\n`
     };
   }
 
   // generate APIs table of contents, and heading
-  if (data.apis == 'No'){
+  if (data.apis == 'No') {
     apiTC = '';
     apiText = '';
   } else {
@@ -100,7 +108,11 @@ The following animation demonstrates the application functionality:
 ![${data.title} animation](${data.imagePath})
 ## Instructions
 ${data.repoInfo}
+
+${installationHeading}
+${dependenciesList}
 ${installationText}
+
 ${testsText}
 ## Contribute
 ${data.contribute}
