@@ -2,12 +2,13 @@ const inquirer = require('inquirer');
 const fs = require('fs'); // fs - file system https://nodejs.org/api/fs.html
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(questions) {
   var gMd = require("./utils/generateMarkdown");
-  inquirer.prompt(data).then((response) =>
-  fs.writeFile(fileName, gMd(response), (err) =>
-  err ? console.error(err) : console.log(`--------------\nproREADME generated\n--------------`))
-);
+  inquirer.prompt(questions)
+    .then((response) => {
+      fs.writeFile('proREADME.md', gMd(response), (err) =>
+      err ? console.error(err) : console.log(`--------------\nproREADME generated\n--------------`))
+    });
 }
 
 // array of questions for user
@@ -60,6 +61,7 @@ const questions = [
         name: 'technologies',
       },
       {
+        // change this to confirm
         type: 'list',
         choices: ['Yes','No'],
         message: 'Does the application utilize APIs?',
@@ -94,4 +96,4 @@ const questions = [
 ];
 
 // function call to initialize program
-writeToFile();
+writeToFile(questions);
